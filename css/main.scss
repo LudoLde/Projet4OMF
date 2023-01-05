@@ -220,8 +220,12 @@ body {
       right: 23px;
       bottom: 34px;
       color: white;
-      .third-section__container__card__icon:hover {
-        color: linear-gradient(353.64deg, #9356dc -5.2%, #ff79da 110.74%);
+      -webkit-text-stroke: 1px black;
+      -webkit-text-fill-color: transparent;
+      &:hover {
+        background: linear-gradient(353.64deg, #9356dc -5.2%, #ff79da 110.74%);
+        -webkit-background-clip: text;
+        -webkit-text-stroke: transparent;
       }
     }
     .third-section__container__card__info {
