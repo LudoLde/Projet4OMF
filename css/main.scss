@@ -78,6 +78,7 @@ body {
   z-index: 2;
   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.15);
   .projet-header__back-menu {
+    display: none;
     position: absolute;
     left: 20px;
     top: 40px;
@@ -121,6 +122,15 @@ body {
   }
   .first-section__second-container__btn {
     @include btn-primary();
+    &:hover {
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0.15)
+        ),
+        linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.55);
+    }
   }
 }
 #second-section {
@@ -167,7 +177,7 @@ body {
 }
 #third-section {
   background-color: #f6f6f6;
-  padding-top: 40px;
+  padding: 40px 0px 55px 0px;
   .third-section__title {
     @include title-main();
     margin: 0px 0px 15px 13px;
@@ -205,6 +215,15 @@ body {
       font-family: "robotoregular";
       font-size: 14px;
     }
+    .third-section__container__card__icon {
+      position: absolute;
+      right: 23px;
+      bottom: 34px;
+      color: white;
+      .third-section__container__card__icon:hover {
+        color: linear-gradient(353.64deg, #9356dc -5.2%, #ff79da 110.74%);
+      }
+    }
     .third-section__container__card__info {
       color: black;
       padding: 0px 10px 0px 11px;
@@ -238,6 +257,9 @@ body {
       margin: 0px 0px 15px 3px;
       padding-inline-start: 8px;
       line-height: 26px;
+    }
+    .footer-section__container__icons {
+      padding-right: 10px;
     }
   }
 }
