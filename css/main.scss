@@ -285,6 +285,36 @@ body {
   display: flex;
   align-self: flex-start;
 }
+@keyframes startersApparition {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes dishesApparition {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes dessertsApparition {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(50%);
+    opacity: 1;
+  }
+}
 #projet-header .projet-header__back-menu {
   display: initial;
   color: black;
@@ -308,7 +338,7 @@ body {
   z-index: 1;
   .second-section__menu__name {
     display: flex;
-    padding-left: 12px;
+    justify-content: center;
     align-items: center;
     column-gap: 30px;
     h2 {
@@ -350,24 +380,36 @@ body {
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.55);
     }
   }
+  .delay1 {
+    animation: startersApparition 1.6s;
+  }
+  .delay2 {
+    animation: dishesApparition 8s;
+  }
+  .delay3 {
+    animation: dessertsApparition 12s;
+  }
   .second-section__menu__card {
-    width: 300px;
+    display: flex;
+    width: 92%;
+    overflow: hidden;
     background-color: white;
     height: 60px;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    transition: transform 0.2s;
     &:hover {
-      transform-origin: 0% 50%;
-      transform: scaleX(0.8);
+      .second-section__menu_card__check {
+        margin-right: 0px;
+      }
+      .check-icon {
+        transform: rotate(360%);
+      }
+      .second-section__menu__card__info {
+        width: 63%;
+      }
     }
     .second-section__menu__card__info {
-      position: relative;
-      padding: 8px 52px 8px 8px;
-    }
-    a {
-      text-decoration: none;
-      color: black;
+      width: 83%;
     }
     p {
       margin: 0;
@@ -383,9 +425,26 @@ body {
       font-size: 15px;
     }
     .second-section__menu__card__info-price {
-      position: absolute;
-      top: 31px;
-      right: 14px;
+      margin-left: auto;
+      display: flex;
+      align-items: flex-end;
+      padding: 0px 14px 12px 0px;
+    }
+    .second-section__menu_card__check {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      margin-right: -50px;
+      padding: 10px;
+      border-radius: 0px 15px 15px 0px;
+      background-color: #99e2d0;
+      transition-property: margin;
+      transition-duration: 2s;
+    }
+    .check-icon {
+      -webkit-text-fill-color: white;
+      font-size: 20px;
     }
   }
 }
