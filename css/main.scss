@@ -66,11 +66,44 @@
 @mixin title-main {
   font-family: "robotobold";
 }
-
+@keyframes loaderdisappear {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0.2;
+  }
+}
 body {
   width: 100%;
   margin: 0;
   font-family: "robotoregular", sans-serif;
+}
+.loader {
+  display: grid;
+  place-items: center;
+  background-color: whitesmoke;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  animation: loaderdisappear 5s forwards;
+  transform-origin: top;
+  i {
+    font-size: 120px;
+    color: hsl(294, 95%, 38%);
+  }
 }
 #projet-header {
   display: flex;
