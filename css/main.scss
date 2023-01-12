@@ -281,7 +281,7 @@ body {
   padding-bottom: 7px;
   font-family: "robotothin";
   font-size: 15px;
-  margin: 16px 0px 0px 8px;
+  margin: 21px 0px 0px 12px;
   display: flex;
   align-self: flex-start;
 }
@@ -400,51 +400,55 @@ body {
     &:hover {
       .second-section__menu_card__check {
         margin-right: 0px;
-      }
-      .check-icon {
-        transform: rotate(360%);
-      }
-      .second-section__menu__card__info {
-        width: 63%;
+        cursor: pointer;
+        &:active {
+          .check-icon {
+            transform: rotate(360deg);
+            transition: 300ms;
+          }
+        }
       }
     }
     .second-section__menu__card__info {
-      width: 83%;
+      width: 63%;
     }
-    p {
-      margin: 0;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .card-plat {
-      font-size: 18px;
-    }
-    .card-details {
-      font-family: "robotothin";
-      font-size: 15px;
-    }
-    .second-section__menu__card__info-price {
-      margin-left: auto;
-      display: flex;
-      align-items: flex-end;
-      padding: 0px 14px 12px 0px;
-    }
-    .second-section__menu_card__check {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 30px;
-      margin-right: -50px;
-      padding: 10px;
-      border-radius: 0px 15px 15px 0px;
-      background-color: #99e2d0;
-      transition-property: margin;
-      transition-duration: 2s;
-    }
-    .check-icon {
-      -webkit-text-fill-color: white;
-      font-size: 20px;
-    }
+  }
+}
+.second-section__menu__card__info {
+  width: 83%;
+  padding: 8px 0px 6px 8px;
+}
+p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-plat {
+  font-size: 18px;
+}
+.card-details {
+  font-family: "robotothin";
+  font-size: 15px;
+}
+.second-section__menu__card__info-price {
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+  padding: 0px 14px 12px 0px;
+}
+.second-section__menu_card__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  margin-right: -50px;
+  padding: 10px;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #99e2d0;
+  transition: margin 2s;
+  .check-icon {
+    -webkit-text-fill-color: white;
+    font-size: 20px;
   }
 }
