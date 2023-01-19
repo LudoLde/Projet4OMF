@@ -40,7 +40,7 @@
 }
 /**********Police**********/
 
-/*****************************MOBILE FIRST***************************************************************************************************/
+/*****************************     MOBILE FIRST          **************************************************************************************/
 
 @mixin btn-primary {
   background: linear-gradient(353.64deg, #9356dc -5.2%, #ff79da 110.74%);
@@ -100,10 +100,13 @@ body {
   z-index: 3;
   animation: loaderdisappear 2s forwards;
   i {
-    font-size: 100px;
+    font-size: 90px;
     color: hsl(294, 95%, 38%);
   }
 }
+
+/*** HEADER ***/
+
 #projet-header {
   display: flex;
   justify-content: center;
@@ -120,6 +123,8 @@ body {
     font-family: "shrikhandregular", sans-serif;
     margin-block-end: 5px;
   }
+
+  /*** FIRST SECTION ***/
 }
 #first-section {
   background: #f6f6f6;
@@ -169,6 +174,9 @@ body {
     }
   }
 }
+
+/*** SECOND SECTION ***/
+
 #second-section {
   padding-left: 15px;
   padding-right: 15px;
@@ -211,6 +219,9 @@ body {
     }
   }
 }
+
+/*** THIRD SECTION ***/
+
 #third-section {
   background-color: #f6f6f6;
   padding: 40px 0px 55px 0px;
@@ -291,6 +302,9 @@ body {
     }
   }
 }
+
+/*** FOOTER ***/
+
 #footer-section {
   background-color: #353535;
   color: white;
@@ -318,7 +332,8 @@ body {
   }
 }
 
-/**********************************************  MENU  *********************************************************************************************/
+/**********************************************    MENU      *********************************************************************************************/
+
 @mixin plat {
   font-family: "robotobold";
   font-size: 18px;
@@ -364,21 +379,30 @@ body {
     opacity: 1;
   }
 }
+
+/*** HEADER MENU ***/
 #projet-header .projet-header__back-menu {
   display: initial;
   color: black;
 }
+
+/*** FIRST SECTION MENU ***/
+
 #first-section__menu {
   position: relative;
   display: flex;
   flex-direction: column;
   .first-section__menu__image {
     img {
+      object-fit: cover;
       height: 275px;
       width: 100%;
     }
   }
 }
+
+/*** SECOND SECTION MENU ***/
+
 #second-section__menu {
   position: relative;
   border-radius: 30px 30px 0px 0px;
@@ -398,22 +422,22 @@ body {
     .second-section__menu__icon {
       .empty {
         position: absolute;
-        top: 32px;
-        right: 33px;
+        top: 36px;
+        right: 28px;
         font-size: 28px;
         color: white;
         -webkit-text-stroke: 1px black;
       }
       .empty:hover {
-        display: none;
+        opacity: 0;
+        transition-duration: 1.3s;
       }
       .full {
         position: absolute;
-        top: 32px;
-        right: 33px;
+        top: 36px;
+        right: 28px;
         font-size: 28px;
         color: transparent;
-        transition: font-size 2s ease-in-out;
       }
       .full::before {
         background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
@@ -517,31 +541,104 @@ p {
   }
 }
 
-/************************************    DESKTOP   *****************************************************************************************************/
-@media screen and (min-width: 945px) {
+/************************************      DESKTOP     *****************************************************************************************************/
+@media screen and (min-width: 1024px) and (max-width: 1319px) {
   #second-section {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 50px 0px 80px 20px;
     .second-section__container {
       flex-direction: row;
-      justify-content: center;
-      column-gap: 4%;
+      column-gap: 3%;
     }
   }
   #third-section {
+    .third-section__title {
+      width: 87%;
+      margin-left: auto;
+    }
     .third-section__container__cards {
       display: grid;
-      padding: 17px;
+      width: 87%;
+      margin-left: auto;
+      padding: 17px 0px 17px 0px;
       overflow-x: auto;
       grid-auto-flow: column;
-      grid-auto-columns: 29%;
+      grid-auto-columns: 35%;
     }
   }
 
   #footer-section {
+    display: flex;
     flex-direction: row-reverse;
     justify-content: end;
-    column-gap: 34px;
+    column-gap: 43px;
     padding: 52px 70px 43px 20px;
+    h4 {
+      display: contents;
+    }
+    .footer-section__container {
+      ul {
+        display: flex;
+        column-gap: 28px;
+      }
+    }
+  }
+
+  /*************************************      MENU DESKTOP    ***********************************************************************/
+
+  #first-section__menu {
+    .first-section__menu__image {
+      img {
+        object-fit: cover;
+        height: 385px;
+      }
+    }
+  }
+
+  #second-section__menu {
+    margin: -66px 0% 0% 15%;
+    width: 70%;
+  }
+}
+
+/**************************************      DESKTOP L        *******************************************************************/
+
+@media screen and (min-width: 1320px) {
+  #second-section {
+    width: 83%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 0px 80px 20px;
+    .second-section__container {
+      flex-direction: row;
+      column-gap: 7%;
+    }
+  }
+
+  #third-section {
+    .third-section__title {
+      width: 91%;
+      margin-left: auto;
+    }
+    .third-section__container__cards {
+      display: grid;
+      width: 91%;
+      margin-left: auto;
+      padding: 17px 0px 17px 0px;
+      overflow-x: auto;
+      grid-auto-flow: column;
+      grid-auto-columns: 31%;
+    }
+  }
+
+  #footer-section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    column-gap: 61px;
+    padding: 52px 87px 43px 20px;
     h4 {
       display: contents;
     }
@@ -549,5 +646,21 @@ p {
       display: flex;
       column-gap: 55px;
     }
+  }
+
+  /**************************         MENU DESKTOP L            *******************************************************************/
+
+  #first-section__menu {
+    .first-section__menu__image {
+      img {
+        object-fit: cover;
+        height: 385px;
+      }
+    }
+  }
+
+  #second-section__menu {
+    margin: -66px 0% 0% 15%;
+    width: 70%;
   }
 }
