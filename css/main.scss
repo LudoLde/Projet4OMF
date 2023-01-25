@@ -269,6 +269,8 @@ body {
       font-size: 28px;
       color: white;
       -webkit-text-stroke: 1px black;
+      opacity: 100%;
+      transition-duration: 1.3s;
     }
     .empty:hover {
       opacity: 0;
@@ -427,6 +429,8 @@ body {
         font-size: 28px;
         color: white;
         -webkit-text-stroke: 1px black;
+        opacity: 100%;
+        transition-duration: 1.3s;
       }
       .empty:hover {
         opacity: 0;
@@ -502,6 +506,21 @@ body {
     }
   }
 }
+.second-section__menu_card__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  margin-right: -50px;
+  padding: 10px;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #99e2d0;
+  transition: margin 2s;
+  .check-icon {
+    -webkit-text-fill-color: white;
+    font-size: 20px;
+  }
+}
 .second-section__menu__card__info {
   width: 83%;
   padding: 8px 0px 6px 8px;
@@ -524,21 +543,6 @@ p {
   display: flex;
   align-items: flex-end;
   padding: 0px 14px 12px 0px;
-}
-.second-section__menu_card__check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  margin-right: -50px;
-  padding: 10px;
-  border-radius: 0px 15px 15px 0px;
-  background-color: #99e2d0;
-  transition: margin 2s;
-  .check-icon {
-    -webkit-text-fill-color: white;
-    font-size: 20px;
-  }
 }
 
 /************************************      DESKTOP     *****************************************************************************************************/
